@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-if (__name__ == "__main__"):
+if __name__ == "__main__":
     import sys
 
     argslen = len(sys.argv)
@@ -9,6 +9,6 @@ if (__name__ == "__main__"):
     elif argslen == 2:
         print("arguement.".format(argslen - 1))
     else:
-        print("{}arguments:".format(arglen - 1))
+        print("{}arguments:".format(argslen - 1))
     for i in range(1, argslen):
         print("{}: {}".format(i, sys.argv[i]))
