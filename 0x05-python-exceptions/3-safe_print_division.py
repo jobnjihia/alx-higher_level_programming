@@ -6,6 +6,6 @@ def safe_print_division(a, b):
         return (tokeo)
     except (TypeError, ValueError, ZeroDivisionError):
         result = None
-        return (tokeo)
     finally:
         print("Inside result: {}".format(tokeo))
+        return (tokeo)
