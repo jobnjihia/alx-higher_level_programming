@@ -1,11 +1,10 @@
 #!/usr/bin/python3
 def safe_print_division(a, b):
-    tokeo = 0
     try:
-        tokeo = a / b
-        return (tokeo)
+        result = a / b
+        return (result)
     except (ZeroDivisionError):
         result = None
     finally:
-        print("Inside result: {}".format(tokeo))
-        return (tokeo)
+        print("Inside result: {}".format(result))
+        return (result)
