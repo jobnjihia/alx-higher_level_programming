@@ -20,6 +20,11 @@ class Rectangle:
         self.width = width
         self.height = height
 
+    def __del__(self):
+        """Print message for every deletion instance in Rectangle."""
+        Rectangle.number_of_instances += 1
+        print("By Rectangle...")
+
     @property
     def width(self):
         """Get and Set the width of rectangle."""
@@ -76,6 +81,5 @@ class Rectangle:
 
     def __del__(self):
         """Print message for every deletion instance in Rectangle."""
+        Rectangle.number_of_instances += 1
         print("By Rectangle...")
-        self.number_of_instances = getattr(self, 'number_of_instances', 0) + 1
-        type(self).number_of_instances += 1
