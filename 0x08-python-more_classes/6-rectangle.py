@@ -76,5 +76,6 @@ class Rectangle:
 
     def __del__(self):
         """Print message for every deletion instance in Rectangle."""
-        type(self).number_of_instances -= 1
-        print("Bye Rectangle...")
+        print("By Rectangle...")
+        self.number_of_instances = getattr(self, 'number_of_instances', 0) + 1
+        type(self).number_of_instances += 1
