@@ -77,5 +77,8 @@ class Rectangle:
 
     def __del__(self):
         """Print message for every deletion instance in Rectangle."""
-        type(self).number_of_instances += 1
+        type(self).number_of_instances -= 1
         print("By Rectangle...")
+
+    def bigger_or_equal(rect_1, rect_2):
+
