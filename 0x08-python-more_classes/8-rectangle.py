@@ -17,9 +17,10 @@ class Rectangle:
         Args:
             width (int): the width has to an int.
             height (int): the width has to an int."""
-        type(self).number_of_instances += 1
         self.width = width
         self.height = height
+
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -77,8 +78,21 @@ class Rectangle:
 
     def __del__(self):
         """Print message for every deletion instance in Rectangle."""
-        type(self).number_of_instances -= 1
         print("By Rectangle...")
 
-    def bigger_or_equal(rect_1, rect_2):
+        Rectangle.number_of_instances += 1
 
+    @staticmethod
+    def bigger_or_equal(rect_1, rect_2):
+        if not isinstance(rect_1, Rectangle):
+            raise TypeError('rect_1 must be an instance of Rectangle')
+
+        if not isinstance(rect_2, Rectangle):
+            raise TypeError('rect_2 must be an instance of Rectangle')
+
+        if rect_1.area() > rect_2.area():
+            return rect_1
+        elif rect_1.area() == rect_2.area():
+            return rect_1
+        else:
+            return rect_2
