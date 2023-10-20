@@ -1,5 +1,5 @@
-__a script that displays the average temperature (Fahrenheit) by city 
-__ordered by temperature (descending order).
+--a script that displays the average temperature (Fahrenheit) by city 
+--ordered by temperature (descending order).
 
 SELECT city,
 AVG(value) as 'avg_temp'
