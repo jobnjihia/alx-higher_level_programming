@@ -1,6 +1,6 @@
-__lists all the cities of California that can be found in hbtn_0d_usa
-__Results must be sorted in ascending order by cities.id
-__You are not allowed to use the JOIN keyword
+-- lists all the cities of California that can be found in hbtn_0d_usa
+-- Results must be sorted in ascending order by cities.id
+-- You are not allowed to use the JOIN keyword
 
 SELECT id, name
   FROM cities
