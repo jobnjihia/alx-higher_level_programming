@@ -1,4 +1,7 @@
-__script that creates a table called first_table
+-- script that creates a table called first_table
 
-CREATE TABLE first_table (
-  id INT, name VARCHAR(256));
+USE mysql;
+CREATE TABLE IF NOT EXISTS first_table (
+	id INT, 
+	name VARCHAR(256)
+);
